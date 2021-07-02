@@ -19,6 +19,9 @@ import ship from '../img/15.jpg'
 import sofia from '../img/16.jpg'
 import valley from '../img/17.jpg'
 import village from '../img/18.jpg'
+import aaa from '../img/19.jpg'
+import bbb from '../img/20.jpg'
+import ccc from '../img/21.jpg'
 
 const Art = () => {
 	const[one, setOne] = useState(false)
@@ -92,6 +95,18 @@ const Art = () => {
 	const[eighteen, setEighteen] = useState(false)
 	const handleEighteen = () => setEighteen(true)
 	const handleNoEighteen = () => setEighteen(false)
+
+	const[nineteen, setNineteen] = useState(false)
+	const handleNineteen = () => setNineteen(true)
+	const handleNoNineteen = () => setNineteen(false)
+
+	const[twenty, setTwenty] = useState(false)
+	const handleTwenty = () => setTwenty(true)
+	const handleNoTwenty = () => setTwenty(false)
+
+	const[twentyone, setTwentyone] = useState(false)
+	const handleTwentyone = () => setTwentyone(true)
+	const handleNoTwentyone = () => setTwentyone(false)
 
 	return (
 		<center className="Art">
@@ -184,6 +199,21 @@ const Art = () => {
 				<article className="Image-Container">
 					<img src={ship} alt="Ship" onClick={handleEighteen}/>
 					<ImageModal id="eighteen" src={ship} show={eighteen} Close={handleNoEighteen}/>
+				</article>
+
+				<article className="Image-Container">
+					<img src={aaa} alt="Ship" onClick={handleNineteen}/>
+					<ImageModal id="nineteen" src={aaa} show={nineteen} Close={handleNoNineteen}/>
+				</article>
+
+				<article className="Image-Container">
+					<img src={bbb} alt="Ship" onClick={handleTwenty}/>
+					<ImageModal id="twenty" src={bbb} show={twenty} Close={handleNoTwenty}/>
+				</article>
+
+				<article className="Image-Container">
+					<img src={ccc} alt="Ship" onClick={handleTwentyone}/>
+					<ImageModal id="twentyone" src={ccc} show={twentyone} Close={handleNoTwentyone}/>
 				</article>
 			</Container>
 		</center>
