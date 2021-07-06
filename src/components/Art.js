@@ -22,8 +22,14 @@ import village from '../img/18.jpg'
 import aaa from '../img/19.jpg'
 import bbb from '../img/20.jpg'
 import ccc from '../img/21.jpg'
+import ddd from '../img/22.jpg'
+import eee from '../img/23.jpg'
+
+import { HeartSpinner } from "react-spinners-kit";
+
 
 const Art = () => {
+
 	const[one, setOne] = useState(false)
 	const handleOne = () => setOne(true)
 	const handleNoOne = () => setOne(false)
@@ -108,8 +114,21 @@ const Art = () => {
 	const handleTwentyone = () => setTwentyone(true)
 	const handleNoTwentyone = () => setTwentyone(false)
 
+	const[twentytwo, setTwentytwo] = useState(false)
+	const handleTwentytwo = () => setTwentytwo(true)
+	const handleNoTwentytwo = () => setTwentytwo(false)
+
+	const[twentythree, setTwentythree] = useState(false)
+	const handleTwentythree = () => setTwentythree(true)
+	const handleNoTwentythree = () => setTwentythree(false)
+
 	return (
 		<center className="Art">
+			<HeartSpinner
+                size={40}
+                color="#FF0000"
+                loading={true}
+            />
 			<Container fluid>
 				<article className="Image-Container">
 					<img src={village} alt="Village" onClick={handleOne}/>
@@ -214,6 +233,16 @@ const Art = () => {
 				<article className="Image-Container">
 					<img src={ccc} alt="Ship" onClick={handleTwentyone}/>
 					<ImageModal id="twentyone" src={ccc} show={twentyone} Close={handleNoTwentyone}/>
+				</article>
+
+				<article className="Image-Container">
+					<img src={ddd} alt="Ship" onClick={handleTwentytwo}/>
+					<ImageModal id="twentytwo" src={ddd} show={twentytwo} Close={handleNoTwentytwo}/>
+				</article>
+
+				<article className="Image-Container">
+					<img src={eee} alt="Ship" onClick={handleTwentythree}/>
+					<ImageModal id="twentythree" src={eee} show={twentythree} Close={handleNoTwentythree}/>
 				</article>
 			</Container>
 		</center>
