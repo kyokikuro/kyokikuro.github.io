@@ -252,7 +252,7 @@ const Art = () => {
 
 				<article className="Image-Container">
 					<img src={img24} alt="Ship" onClick={handleTwentyfour}/>
-					<ImageModal id="twentyfour" src={eee} show={twentyfour} Close={handleNoTwentyfour}/>
+					<ImageModal id="twentyfour" src={img24} show={twentyfour} Close={handleNoTwentyfour}/>
 				</article>
 			</Container>
 		</center>
