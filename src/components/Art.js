@@ -24,6 +24,7 @@ import bbb from '../img/20.jpg'
 import ccc from '../img/21.jpg'
 import ddd from '../img/22.jpg'
 import eee from '../img/23.jpg'
+import img24 from '../img/24.jpg'
 
 import { HeartSpinner } from "react-spinners-kit";
 
@@ -122,6 +123,10 @@ const Art = () => {
 	const handleTwentythree = () => setTwentythree(true)
 	const handleNoTwentythree = () => setTwentythree(false)
 
+	const[twentyfour, setTwentyfour] = useState(false)
+	const handleTwentyfour = () => setTwentyfour(true)
+	const handleNoTwentyfour = () => setTwentyfour(false)
+
 	return (
 		<center className="Art">
 			<HeartSpinner
@@ -190,10 +195,10 @@ const Art = () => {
 					<ImageModal id="twelve" src={night_bird} show={twelve} Close={handleNoTwelve}/>
 				</article>
 
-				<article className="Image-Container">
+				{/* <article className="Image-Container">
 					<img src={chutki} alt="Chota beam Chutki" onClick={handleThirteen}/>
 					<ImageModal id="thirteen" src={chutki} show={thirteen} Close={handleNoThirten}/>
-				</article>
+				</article> */}
 
 				<article className="Image-Container">
 					<img src={red_bubbles} alt="Heart bubbles" onClick={handleFourteen}/>
@@ -230,10 +235,10 @@ const Art = () => {
 					<ImageModal id="twenty" src={bbb} show={twenty} Close={handleNoTwenty}/>
 				</article>
 
-				<article className="Image-Container">
+				{/* <article className="Image-Container">
 					<img src={ccc} alt="Ship" onClick={handleTwentyone}/>
 					<ImageModal id="twentyone" src={ccc} show={twentyone} Close={handleNoTwentyone}/>
-				</article>
+				</article> */}
 
 				<article className="Image-Container">
 					<img src={ddd} alt="Ship" onClick={handleTwentytwo}/>
@@ -243,6 +248,11 @@ const Art = () => {
 				<article className="Image-Container">
 					<img src={eee} alt="Ship" onClick={handleTwentythree}/>
 					<ImageModal id="twentythree" src={eee} show={twentythree} Close={handleNoTwentythree}/>
+				</article>
+
+				<article className="Image-Container">
+					<img src={img24} alt="Ship" onClick={handleTwentyfour}/>
+					<ImageModal id="twentyfour" src={eee} show={twentyfour} Close={handleNoTwentyfour}/>
 				</article>
 			</Container>
 		</center>
