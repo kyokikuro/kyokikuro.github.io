@@ -25,6 +25,7 @@ import ccc from '../img/21.jpg'
 import ddd from '../img/22.jpg'
 import eee from '../img/23.jpg'
 import img24 from '../img/24.jpg'
+import img25 from '../img/25.jpg'
 
 import { HeartSpinner } from "react-spinners-kit";
 
@@ -127,6 +128,10 @@ const Art = () => {
 	const handleTwentyfour = () => setTwentyfour(true)
 	const handleNoTwentyfour = () => setTwentyfour(false)
 
+  const[twentyfive, setTwentyfive] = useState(false)
+	const handleTwentyfive = () => setTwentyfive(true)
+	const handleNoTwentyfive = () => setTwentyfive(false)
+
 	return (
 		<center className="Art">
 			<HeartSpinner
@@ -148,6 +153,16 @@ const Art = () => {
 				<article className="Image-Container">
 					<img src={valley} alt="Valley" onClick={handleThree}/>
 					<ImageModal id="three" src={valley} show={three} Close={handleNoThree}/>
+				</article>
+
+        <article className="Image-Container">
+					<img src={img25} alt="Ship" onClick={handleTwentyfive}/>
+					<ImageModal id="twentyfive" src={img25} show={twentyfive} Close={handleNoTwentyfive}/>
+				</article>
+
+        <article className="Image-Container">
+					<img src={img24} alt="Ship" onClick={handleTwentyfour}/>
+					<ImageModal id="twentyfour" src={img24} show={twentyfour} Close={handleNoTwentyfour}/>
 				</article>
 
 				<article className="Image-Container">
@@ -250,10 +265,6 @@ const Art = () => {
 					<ImageModal id="twentythree" src={eee} show={twentythree} Close={handleNoTwentythree}/>
 				</article>
 
-				<article className="Image-Container">
-					<img src={img24} alt="Ship" onClick={handleTwentyfour}/>
-					<ImageModal id="twentyfour" src={img24} show={twentyfour} Close={handleNoTwentyfour}/>
-				</article>
 			</Container>
 		</center>
 	)
