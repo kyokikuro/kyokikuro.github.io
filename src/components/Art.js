@@ -26,6 +26,9 @@ import ddd from "../img/22.jpg";
 import eee from "../img/23.jpg";
 import img24 from "../img/24.jpg";
 import img25 from "../img/25.jpg";
+import img26 from "../img/26.jpg";
+import img27 from "../img/27.jpg";
+import lalajins from "../img/lalajins.gif";
 
 import { HeartSpinner } from "react-spinners-kit";
 
@@ -129,11 +132,27 @@ const Art = () => {
   const [twentyfive, setTwentyfive] = useState(false);
   const handleTwentyfive = () => setTwentyfive(true);
   const handleNoTwentyfive = () => setTwentyfive(false);
+  
+  const [twentysix, setTwentysix] = useState(false);
+  const handleTwentysix = () => setTwentysix(true);
+  const handleNoTwentysix = () => setTwentysix(false);
+
+  const [twentyseven, setTwentyseven] = useState(false);
+  const handleTwentyseven = () => setTwentyseven(true);
+  const handleNoTwentyseven = () => setTwentyseven(false);
 
   return (
     <center className="Art">
-      <HeartSpinner size={40} color="#FF0000" loading={true} />
+      {/* <div style={{height: 400, width: 400}}> */}
+      <img src={lalajins} alt="lala" style={{ height: 480, width: 571 }} />
+      {/* </div> */}
+
+
       <Container fluid>
+        {/* <article className="Image-Container">
+          <img src={lalajins} alt="lala" />
+        </article> */}
+
         <article className="Image-Container">
           <img src={village} alt="Village" onClick={handleOne} />
           <ImageModal id="one" src={village} show={one} Close={handleNoOne} />
@@ -270,6 +289,16 @@ const Art = () => {
         </article>
 
         <article className="Image-Container">
+          <img src={ddd} alt="Ship" onClick={handleTwentytwo} />
+          <ImageModal
+            id="twentytwo"
+            src={ddd}
+            show={twentytwo}
+            Close={handleNoTwentytwo}
+          />
+        </article>
+
+        <article className="Image-Container">
           <img
             src={restaurant}
             alt="Restaurant in Zootophia"
@@ -328,15 +357,7 @@ const Art = () => {
 					<ImageModal id="twentyone" src={ccc} show={twentyone} Close={handleNoTwentyone}/>
 				</article> */}
 
-        <article className="Image-Container">
-          <img src={ddd} alt="Ship" onClick={handleTwentytwo} />
-          <ImageModal
-            id="twentytwo"
-            src={ddd}
-            show={twentytwo}
-            Close={handleNoTwentytwo}
-          />
-        </article>
+        
 
         <article className="Image-Container">
           <img src={eee} alt="Ship" onClick={handleTwentythree} />
@@ -347,7 +368,28 @@ const Art = () => {
             Close={handleNoTwentythree}
           />
         </article>
+
+        <article className="Image-Container">
+          <img src={img26} alt="Ship" onClick={handleTwentysix} />
+          <ImageModal
+            id="twentysix"
+            src={img26}
+            show={twentysix}
+            Close={handleNoTwentysix}
+          />
+        </article>
+
+        <article className="Image-Container">
+          <img src={img27} alt="Ship" onClick={handleTwentyseven} />
+          <ImageModal
+            id="twentyseven"
+            src={img27}
+            show={twentyseven}
+            Close={handleNoTwentyseven}
+          />
+        </article>
       </Container>
+      <HeartSpinner size={40} color="#FF0000" loading={true} />
     </center>
   );
 };
