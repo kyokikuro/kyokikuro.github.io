@@ -28,7 +28,8 @@ import img24 from "../img/24.jpg";
 import img25 from "../img/25.jpg";
 import img26 from "../img/26.jpg";
 import img27 from "../img/27.jpg";
-import lalajins from "../img/lalajins.gif";
+import img28 from "../img/28.jpg";
+import lalajins1 from "../img/lalajins1.gif";
 
 import { HeartSpinner } from "react-spinners-kit";
 
@@ -141,10 +142,14 @@ const Art = () => {
   const handleTwentyseven = () => setTwentyseven(true);
   const handleNoTwentyseven = () => setTwentyseven(false);
 
+  const [twenty8, setTwenty8] = useState(false);
+  const handleTwenty8 = () => setTwenty8(true);
+  const handleNoTwenty8 = () => setTwenty8(false);
+
   return (
     <center className="Art">
       {/* <div style={{height: 400, width: 400}}> */}
-      <img src={lalajins} alt="lala" style={{ height: 480, width: 571 }} />
+      <img src={lalajins1} alt="lala" style={{ height: 480, width: 571 }} />
       {/* </div> */}
 
 
@@ -388,6 +393,17 @@ const Art = () => {
             Close={handleNoTwentyseven}
           />
         </article>
+
+        <article className="Image-Container">
+          <img src={img28} alt="Ship" onClick={handleTwenty8} />
+          <ImageModal
+            id="twenty8"
+            src={img28}
+            show={twenty8}
+            Close={handleNoTwenty8}
+          />
+        </article>
+
       </Container>
       <HeartSpinner size={40} color="#FF0000" loading={true} />
     </center>
