@@ -29,9 +29,14 @@ import img25 from "../img/25.jpg";
 import img26 from "../img/26.jpg";
 import img27 from "../img/27.jpg";
 import img28 from "../img/28.jpg";
+import img29 from "../img/29.jpg";
+import img30 from "../img/30.jpg";
+import img31 from "../img/31.jpg";
 import lalajins1 from "../img/lalajins1.gif";
 
 import { HeartSpinner } from "react-spinners-kit";
+import Snowfall from "react-snowfall";
+import SurpriseSanta from "surprise-santa";
 
 const Art = () => {
   const [one, setOne] = useState(false);
@@ -133,7 +138,7 @@ const Art = () => {
   const [twentyfive, setTwentyfive] = useState(false);
   const handleTwentyfive = () => setTwentyfive(true);
   const handleNoTwentyfive = () => setTwentyfive(false);
-  
+
   const [twentysix, setTwentysix] = useState(false);
   const handleTwentysix = () => setTwentysix(true);
   const handleNoTwentysix = () => setTwentysix(false);
@@ -146,13 +151,27 @@ const Art = () => {
   const handleTwenty8 = () => setTwenty8(true);
   const handleNoTwenty8 = () => setTwenty8(false);
 
+  const [twenty9, setTwenty9] = useState(false);
+  const handleTwenty9 = () => setTwenty9(true);
+  const handleNoTwenty9 = () => setTwenty9(false);
+
+  const [twenty30, setTwenty30] = useState(false);
+  const handleTwenty30 = () => setTwenty30(true);
+  const handleNoTwenty30 = () => setTwenty30(false);
+
+  const [twenty31, setTwenty31] = useState(false);
+  const handleTwenty31 = () => setTwenty31(true);
+  const handleNoTwenty31 = () => setTwenty31(false);
+
   return (
     <center className="Art">
       {/* <div style={{height: 400, width: 400}}> */}
+      <SurpriseSanta minTime={5} maxTime={10} />
       <img src={lalajins1} alt="lala" style={{ height: 480, width: 571 }} />
-      {/* </div> */}
-
-
+      <div style={{ height: '100%' , width: '100%' }}>
+        <Snowfall snowflakeCount={400} />
+      </div>
+      ,{/* </div> */}
       <Container fluid>
         {/* <article className="Image-Container">
           <img src={lalajins} alt="lala" />
@@ -362,8 +381,6 @@ const Art = () => {
 					<ImageModal id="twentyone" src={ccc} show={twentyone} Close={handleNoTwentyone}/>
 				</article> */}
 
-        
-
         <article className="Image-Container">
           <img src={eee} alt="Ship" onClick={handleTwentythree} />
           <ImageModal
@@ -404,6 +421,35 @@ const Art = () => {
           />
         </article>
 
+        <article className="Image-Container">
+          <img src={img29} alt="Ship" onClick={handleTwenty9} />
+          <ImageModal
+            id="twenty9"
+            src={img29}
+            show={twenty9}
+            Close={handleNoTwenty9}
+          />
+        </article>
+
+        <article className="Image-Container">
+          <img src={img30} alt="Ship" onClick={handleTwenty30} />
+          <ImageModal
+            id="twenty30"
+            src={img30}
+            show={twenty30}
+            Close={handleNoTwenty30}
+          />
+        </article>
+
+        <article className="Image-Container">
+          <img src={img31} alt="Ship" onClick={handleTwenty31} />
+          <ImageModal
+            id="twenty31"
+            src={img31}
+            show={twenty31}
+            Close={handleNoTwenty31}
+          />
+        </article>
       </Container>
       <HeartSpinner size={40} color="#FF0000" loading={true} />
     </center>

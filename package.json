@@ -14,7 +14,9 @@
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.0.0",
     "react-scripts": "3.0.0",
-    "react-spinners-kit": "^1.9.1"
+    "react-snowfall": "^1.1.1",
+    "react-spinners-kit": "^1.9.1",
+    "surprise-santa": "^1.0.6"
   },
   "engines": {
     "npm": "6.4.1",
