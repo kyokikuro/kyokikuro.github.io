@@ -32,6 +32,10 @@ import img28 from "../img/28.jpg";
 import img29 from "../img/29.jpg";
 import img30 from "../img/30.jpg";
 import img31 from "../img/31.jpg";
+import img32 from "../img/32.jpg";
+import img33 from "../img/33.jpg";
+import img34 from "../img/34.jpg";
+import img35 from "../img/35.jpg";
 import lalajins1 from "../img/lalajins1.gif";
 
 import { HeartSpinner } from "react-spinners-kit";
@@ -162,6 +166,22 @@ const Art = () => {
   const [twenty31, setTwenty31] = useState(false);
   const handleTwenty31 = () => setTwenty31(true);
   const handleNoTwenty31 = () => setTwenty31(false);
+
+  const [twenty32, setTwenty32] = useState(false);
+  const handleTwenty32 = () => setTwenty32(true);
+  const handleNoTwenty32 = () => setTwenty32(false);
+
+  const [twenty33, setTwenty33] = useState(false);
+  const handleTwenty33 = () => setTwenty33(true);
+  const handleNoTwenty33 = () => setTwenty33(false);
+
+  const [twenty34, setTwenty34] = useState(false);
+  const handleTwenty34 = () => setTwenty34(true);
+  const handleNoTwenty34 = () => setTwenty34(false);
+
+  const [twenty35, setTwenty35] = useState(false);
+  const handleTwenty35 = () => setTwenty35(true);
+  const handleNoTwenty35 = () => setTwenty35(false);
 
   return (
     <center className="Art">
@@ -450,6 +470,47 @@ const Art = () => {
             Close={handleNoTwenty31}
           />
         </article>
+
+        <article className="Image-Container">
+          <img src={img32} alt="Ship" onClick={handleTwenty32} />
+          <ImageModal
+            id="twenty32"
+            src={img32}
+            show={twenty32}
+            Close={handleNoTwenty32}
+          />
+        </article>
+
+        <article className="Image-Container">
+          <img src={img33} alt="Ship" onClick={handleTwenty33} />
+          <ImageModal
+            id="twenty33"
+            src={img33}
+            show={twenty33}
+            Close={handleNoTwenty33}
+          />
+        </article>
+
+        <article className="Image-Container">
+          <img src={img34} alt="Ship" onClick={handleTwenty34} />
+          <ImageModal
+            id="twenty34"
+            src={img34}
+            show={twenty34}
+            Close={handleNoTwenty34}
+          />
+        </article>
+
+        <article className="Image-Container">
+          <img src={img35} alt="Ship" onClick={handleTwenty35} />
+          <ImageModal
+            id="twenty35"
+            src={img35}
+            show={twenty35}
+            Close={handleNoTwenty35}
+          />
+        </article>
+
       </Container>
       <HeartSpinner size={40} color="#FF0000" loading={true} />
     </center>
