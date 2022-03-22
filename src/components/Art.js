@@ -36,6 +36,7 @@ import img32 from "../img/32.jpg";
 import img33 from "../img/33.jpg";
 import img34 from "../img/34.jpg";
 import img35 from "../img/35.jpg";
+import img36 from "../img/36.jpg";
 import lalajins1 from "../img/lalajins1.gif";
 
 import { HeartSpinner } from "react-spinners-kit";
@@ -182,6 +183,10 @@ const Art = () => {
   const [twenty35, setTwenty35] = useState(false);
   const handleTwenty35 = () => setTwenty35(true);
   const handleNoTwenty35 = () => setTwenty35(false);
+
+  const [twenty36, setTwenty36] = useState(false);
+  const handleTwenty36 = () => setTwenty36(true);
+  const handleNoTwenty36 = () => setTwenty36(false);
 
   return (
     <center className="Art">
@@ -508,6 +513,16 @@ const Art = () => {
             src={img35}
             show={twenty35}
             Close={handleNoTwenty35}
+          />
+        </article>
+
+        <article className="Image-Container">
+          <img src={img36} alt="Ship" onClick={handleTwenty36} />
+          <ImageModal
+            id="twenty36"
+            src={img36}
+            show={twenty36}
+            Close={handleNoTwenty36}
           />
         </article>
 
